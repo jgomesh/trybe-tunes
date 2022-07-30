@@ -5,3 +5,14 @@ A ideia era fazer um site com as funcionalidades de escolher o nome de usuário 
 A cada dia que passa tenho mais certeza que escolhi o caminho certo pra carreira, sigo apaixonado por programação e todas as possibilidades que ela abre.
 
 [ FUNÇÕES ASSÍNCRONAS/JAVASCRIPT/ React Router/ HTML / FLEXBOX]
+
+
+# USO LOCAL
+
+git clone git@github.com:jgomesh/trybe-tunes.git
+
+cd trybe-tunes
+
+npm install
+
+npm start
