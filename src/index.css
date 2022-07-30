@@ -1,13 +1,412 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Signika', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden  ;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(140, 216, 144);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: 'Signika', sans-serif;
+  font-size: 1.2em;
+  height: 50px;
+  align-items: center;
+}
+
+header nav a {
+  margin-right: 15px;
+}
+
+header nav a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.forms input, .login-page form input {
+  margin-right: 10px;
+  border: 2px solid rgb(140, 216, 144);
+  border-radius: 5px;
+  width: 30%;
+}
+
+.forms button, .login-page form button, .page-profile-edit form button {
+  color: white;
+  background-color: rgb(140, 216, 144);
+  border: none;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.forms button:hover, .login-page form button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow-y: scroll;
+  justify-content: center;
+}
+
+.album {
+  color:rgb(140, 216, 144);
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0);
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 5px;
+}
+
+.album img {
+  height: 200px;
+  width: 200px;
+}
+
+.album a {
+  background-color:rgb(140, 216, 144);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 10%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.album a:hover {
+  background-color:rgb(187, 230, 189);
+}
+
+.results {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  color:rgb(140, 216, 144);
+  margin: 10px;
+}
+
+.user {
+  text-transform: uppercase;
+}
+
+.login-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url(https://images.unsplash.com/photo-1487180144351-b8472da7d491?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172);
+  background-size: cover;
+}
+
+.login-page form input {
+  width: 80%;
+  margin-bottom: 50px;
+  font-size: 2em;
+  background-color: rgba(255, 228, 196, 0);
+}
+
+.login-page form input:focus, input:focus, input::placeholder, input:active, input {
+  color:rgb(140, 216, 144) !important;
+  background-color: rgba(255, 228, 196, 0);
+}
+
+.login-page form input::placeholder {
+  width: 100%;
+  margin-bottom: 50px;
+  color:rgb(140, 216, 144);
+}
+
+.title {
+  color:rgb(140, 216, 144);
+  font-size: 3em;
+}
+
+.uil {
+  margin-right: 20px;
+}
+
+.loading {
+  color:rgb(140, 216, 144);
+}
+
+.page-search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: center;
+  height: 100vh;
+  background: url(https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);  
+  color:rgb(140, 216, 144);
+  background-size: cover  ;
+}
+
+.page-profile {
+  background: url(https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);  
+  color: rgb(140, 216, 144);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.column {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh ;
+}
+
+.column-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 70%;
+  background-color: rgba(143, 190, 124, 0.158);
+  width: 300px;
+  border-radius: 10px;
+}
+
+.column-item span, .column-item p{
+  background-color: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  width: 80%;
+  padding: 5px 15px;
+}
+
+.column a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(140, 216, 144);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.column a:hover {
+  opacity: 50%;
+}
+
+.column img{
+  border-radius: 15px;
+  height: 200px;
+  opacity: 80%;
+  width: 200px;
+  margin: 10px 0px;
+}
+/* PARTE DAS MUSICAS DO ALBUM CLICADO */
+
+.page-album {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  color:rgb(165, 211, 166);
+}
+
+header {
+  width: 100%;
+}
+
+.songs{
+  color:rgb(140, 216, 144);
+  border: 2px solid rgb(140, 216, 144);
+  width: 50%;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  text-align: center;
+  width: 40%;
+  border: 2px solid rgb(140, 216, 144);
+  height: 500px;
+  margin: 5px;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+.songs div span {
+  width: 100px;
+}
+
+.songs div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgba(166, 223, 169, 0);
+}
+
+.album-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 40%;
+  border: 2px solid rgb(140, 216, 144);
+  height: 500px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.album-found img {
+  width: 200px !important;
+}
+
+.songs-container {
+  display: flex;
+  width: 100%;
+  padding: 15px;  
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: url(https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);  
+  background-size: cover;
+}
+
+.favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  padding: 10px;
+  color: rgb(140, 216, 144);
+  height: 100vh;
+}
+
+.page-favorites, .page-profile-edit {
+  height: 100vh;
+  background: url(https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);  
+  background-size: cover;
+  overflow: hidden;
+}
+
+.page-profile-edit form {
+  width: 70%;
+  height: 50%;
+  background-color: rgba(140, 216, 144, 0.315);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.page-profile-edit form button:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.edit-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: rgb(140, 216, 144);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cor de fundo do autocomplete */
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgba(192, 184, 184, 0.89) inset;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-text-fill-color: rgb(140, 216, 144) !important;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.page-profile-edit {
+  overflow: hidden;
+}
+
+.page-profile-edit form input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  font-size: 1.5em;
+  color: white !important;
+  border: 2px solid rgb(140, 216, 144);
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.favorites-box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 80%;
+  overflow-y: scroll; 
+  border: 2px solid rgb(140, 216, 144);
+}
+
+.favorites-box section {
+  width: 100%;
+  display: flex;
+  color:rgb(140, 216, 144);
+}
+
+.favorites-box section div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(140, 216, 144);
+  margin-bottom: 5px;
+  align-items: center;
+  padding: 5px;
+}
+
+.favorites-box section div span {
+  width: 30%;
 }
