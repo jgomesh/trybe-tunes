@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/trybe-tunes/static/css/main.b79e8702.css",
+    "main.js": "/trybe-tunes/static/js/main.eb267b49.js",
+    "index.html": "/trybe-tunes/index.html",
+    "main.b79e8702.css.map": "/trybe-tunes/static/css/main.b79e8702.css.map",
+    "main.eb267b49.js.map": "/trybe-tunes/static/js/main.eb267b49.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b79e8702.css",
+    "static/js/main.eb267b49.js"
+  ]
+}
